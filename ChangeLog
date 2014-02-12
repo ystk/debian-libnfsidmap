@@ -143,3 +143,25 @@ Changes since libnfsidmap-0.22 (which was never officially announced):
 From Guillaume Rousse <Guillaume.Rousse@inria.fr>:
 Changes to install, and look for, the plugin libraries in a separate
 libnfsidmap directory.
+
+2010-12-08:
+
+Changes since libnfsidmap-0.23
+
+Added autogen.sh which runs all the autoconfig scripts
+Added a .gitignore file
+
+From Bryan Schumaker <bjschuma@netapp.com>
+Added nfs4_owner interfaces which are used by the
+new nfsidmap program
+
+2011-12-05:
+
+Changes since libnfsidmap-0.24
+
+nss_getpwnam: ignore case when comparing domain names
+rpc.idmapd fails to load plugings
+Cleaned up some warnings
+Ignoring more files.
+Improve debugging during lib initialization.
+Added new --with-pluginpath configuration flag
