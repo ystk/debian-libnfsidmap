@@ -1,7 +1,102 @@
+libnfsidmap (0.25-4) unstable; urgency=low
+
+  * Set pluginpath to /lib/$(DEB_HOST_MULTIARCH)/libnfsidmap
+    Closes: #676719
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 09 Jun 2012 17:26:28 +1000
+
+libnfsidmap (0.25-3) unstable; urgency=low
+
+  * Add multiarch support
+  * Use hardening options
+  * DH compatibility level is 9
+  * Fix wrong-section-according-to-package-name
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Fri, 08 Jun 2012 16:03:17 +1000
+
+libnfsidmap (0.25-2) unstable; urgency=low
+
+  * Conflicts with nfs-common (= 1:1.1.2-6lenny2) 
+    Closes: 654714
+  * Build-depends on autoconf (>= 2.68)
+    Closes: 660914
+  * Fix "umich_ldap.so is an empty module"
+    Add 01-661215-wrong-double-ldap-check.patch
+    Patch by Steve Langasek
+    Closes: 661215
+    LP: #939232
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 27 Feb 2012 13:28:20 +1100
+
+libnfsidmap (0.25-1) unstable; urgency=low
+
+  * New upstream version 0.25
+    Changes since libnfsidmap-0.24
+      nss_getpwnam: ignore case when comparing domain names
+      rpc.idmapd fails to load plugings
+      Cleaned up some warnings
+      Ignoring more git files
+      Improve debugging during lib initialization
+      Added new --with-pluginpath configuration flag
+    Delete
+      02-add--with-pluginpath-configuration-flag.patch
+      03-improve-debugging-during-lib-initialization.patch
+      04-clean-up-some-warnings.patch
+      05-dont-fail-to-load-plugings.patch
+      06-ignore-case-when-comparing-domain-names.patch
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Wed, 07 Dec 2011 09:32:53 +1100
+
+libnfsidmap (0.24-4) unstable; urgency=low
+
+  * Add --with-pluginpath configuration flag
+    Add 02-add--with-pluginpath-configuration-flag.patch
+  * Improve debugging during lib initialization
+    Add 03-improve-debugging-during-lib-initialization.patch
+  * Clean up some warnings
+    Add 04-clean-up-some-warnings.patch
+  * Don't fail to load plugings
+    Add 05-dont-fail-to-load-plugings.patch
+  * Ignore case when comparing domain names
+    Add 06-ignore-case-when-comparing-domain-names.patch
+  * Set configure flag --with-pluginpath to /lib/libnfsidmap
+    Delete 01-649491-move-library.patch
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Tue, 06 Dec 2011 07:35:19 +1100
+
+libnfsidmap (0.24-3) unstable; urgency=low
+
+  * Point PATH_PLUGINS to /lib/libnfsidmap
+    Add 01-649491-move-library.patch
+    Closes: 650904, 650948
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Mon, 05 Dec 2011 11:30:49 +1100
+
+libnfsidmap (0.24-2) unstable; urgency=low
+
+  * Move .so files from /usr/lib to /lib
+    Closes: 649491
+  * Ship manpage idmapd.conf.5
+    Closes: 585083, 594933, 619996, 625826
+  * Standars-Version is 3.9.2
+  * Fix debian-rules-missing-recommended-target
+  * Fix description-synopsis-starts-with-article
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 03 Dec 2011 13:13:38 +1100
+
+libnfsidmap (0.24-1) unstable; urgency=low
+
+  * New upstream release 
+  * Debian source format is 3.0 (quilt)
+  * Fix debhelper-but-no-misc-depends
+  * Fix out-of-date-standards-version
+
+ -- Anibal Monsalve Salazar <anibal@debian.org>  Wed, 09 Mar 2011 20:41:15 +1100
+
 libnfsidmap (0.23-2) unstable; urgency=low
 
   * Ship /usr/lib/libnfsidmap/{nsswitch,umich_ldap,static}.so
-    Closes: 561617
+    Closes: 561617, 561656
 
  -- Anibal Monsalve Salazar <anibal@debian.org>  Sat, 19 Dec 2009 09:26:19 +1100
 
